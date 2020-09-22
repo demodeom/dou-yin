@@ -42,8 +42,8 @@ def click_bao_xiang_ad():
 
 def click_bao_xiang():
     # 找到宝箱
-
-    res, pos, max_val = find_bao_xiang('open_bao_xiang.png', 0.8)
+    screen()
+    res, pos, max_val = find_bao_xiang('open_bao_xiang.png', 0.93)
     # print('bao xiang : ', max_val)
     if not res:
         # print('not fond open bao xiang ', max_val)
@@ -69,8 +69,11 @@ def click_bao_xiang_enter():
 
 
 def job_click_treasure_box():
+    # print(1)
     if random.randint(1, 5) != 2:
         return
+    swip_up()
+    swip_up()
     screen()
     res = click_bao_xiang_enter()
     if not res:
